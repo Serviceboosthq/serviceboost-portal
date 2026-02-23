@@ -1,65 +1,92 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div>
+
+      {/* HEADER */}
+      <header style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "20px 40px",
+        borderBottom: "1px solid #1e293b"
+      }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 15 }}>
+          <img src="/logo.png" alt="ServiceBoost Pro" style={{ height: 45 }} />
+          <div>
+            <div style={{ fontWeight: "bold" }}>ServiceBoost Pro</div>
+            <div style={{ fontSize: 12, color: "#94a3b8" }}>
+              Veteran-Owned
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+
+        <div style={{ display: "flex", gap: 15 }}>
+          <a href="/dashboard" style={{
+            backgroundColor: "#dc2626",
+            padding: "10px 20px",
+            borderRadius: 6,
+            color: "white",
+            textDecoration: "none",
+            fontWeight: "bold"
+          }}>
+            Request Demo
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+          <a href="/dashboard" style={{
+            border: "1px solid #334155",
+            padding: "10px 20px",
+            borderRadius: 6,
+            color: "white",
+            textDecoration: "none"
+          }}>
+            Login
           </a>
         </div>
-      </main>
+      </header>
+
+      {/* HERO */}
+      <section style={{
+        textAlign: "center",
+        padding: "100px 40px"
+      }}>
+        <h1 style={{ fontSize: 46, marginBottom: 20 }}>
+          Operational Control for Pest Control Companies.
+        </h1>
+        <p style={{
+          maxWidth: 800,
+          margin: "0 auto 30px",
+          color: "#94a3b8",
+          fontSize: 20
+        }}>
+          See revenue at risk before it becomes loss.  
+          Enforce accountability across every branch.  
+          Automate AR reminders and seasonal revenue prompts.
+        </p>
+      </section>
+
+      {/* AUTHORITY SECTION */}
+      <section style={{
+        textAlign: "center",
+        padding: "60px 40px",
+        borderTop: "1px solid #1e293b"
+      }}>
+        <h2>Built From 25+ Years in Pest Control Operations</h2>
+        <p style={{
+          maxWidth: 850,
+          margin: "20px auto",
+          color: "#94a3b8",
+          fontSize: 18
+        }}>
+          ServiceBoost Pro wasn’t created by software engineers guessing at industry problems.  
+          It was built by a pest control regional leader with over 25 years of operational experience —
+          managing branches, technicians, cancellations, AR exposure, QA failures, and revenue accountability.
+        </p>
+
+        <p style={{ fontWeight: "bold" }}>
+          This is not theory.  
+          This is operational reality turned into software.
+        </p>
+      </section>
+
     </div>
-  );
+  )
 }
