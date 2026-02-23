@@ -4,7 +4,6 @@ import Link from "next/link"
 
 export const metadata = {
   title: "ServiceBoost Pro",
-  description: "Multi-Branch Revenue Control Center",
 }
 
 export default function RootLayout({
@@ -54,7 +53,7 @@ export default function RootLayout({
           </aside>
 
           {/* Main Content */}
-          <main className="flex-1">
+          <main className="flex-1 p-10">
             {children}
           </main>
 
